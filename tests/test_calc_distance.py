@@ -1,4 +1,3 @@
-import json
 from unittest import TestCase
 from customer_finder.distance import great_circle_distance
 
