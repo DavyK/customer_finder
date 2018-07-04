@@ -1,0 +1,16 @@
+[
+  "tests/test_distance.py::TestGreatCircleDistance::test_distance_between_two_points",
+  "tests/test_distance.py::TestGreatCircleDistance::test_not_floats",
+  "tests/test_distance.py::TestGreatCircleDistance::test_too_few_coords",
+  "tests/test_distance.py::TestGreatCircleDistance::test_too_many_coords",
+  "tests/test_io.py::TestReader::test_read",
+  "tests/test_main.py::TestFilter::test_filter_for_nearby_customers_1",
+  "tests/test_main.py::TestFilter::test_filter_for_nearby_customers_2",
+  "tests/test_main.py::TestOutput::test_json_output",
+  "tests/test_main.py::TestOutput::test_output",
+  "tests/test_models.py::TestLocation::test_basic_attributes",
+  "tests/test_models.py::TestLocation::test_coordinates",
+  "tests/test_models.py::TestLocation::test_not_floatable",
+  "tests/test_models.py::TestCustomer::test_basic_attributes",
+  "tests/test_models.py::TestCustomer::test_coordinates"
+]

@@ -1,5 +1,6 @@
 """
-    Various methods for calculating distance and (in)sanity checks on their inputs
+    Various methods for calculating distance and (in)sanity checks on their
+    inputs.
 """
 
 from math import sin, cos, asin, sqrt, radians
@@ -11,11 +12,16 @@ EARTH_RADUS_KM = 6371.0
 
 
 def check_coordinate(coord):
+    """
+    Ensure coordinate is some 2 length sequence comprised of floats only
+    """
     if len(coord) != 2:
         raise ValueError('Coordinates must have 2, and only 2 values')
 
     if not isinstance(coord[0], float) and not isinstance(coord[0], float):
-        raise ValueError('Coordinates must be composed of floating point numbers')
+        raise ValueError(
+            'Coordinates must be composed of floating point numbers'
+        )
 
 
 def great_circle_distance(coord_a, coord_b, R=EARTH_RADUS_KM):
@@ -34,7 +40,10 @@ def great_circle_distance(coord_a, coord_b, R=EARTH_RADUS_KM):
     delta_lat = pt_b.lat - pt_a.lat
     delta_lon = pt_b.lon - pt_a.lon
 
-    a = sin(delta_lat / 2) ** 2 + cos(pt_a.lat) * cos(pt_b.lat) * sin(delta_lon / 2)**2
+    a = (
+        sin(delta_lat / 2) ** 2 +
+        cos(pt_a.lat) * cos(pt_b.lat) * sin(delta_lon / 2) ** 2
+    )
     c = 2 * asin(sqrt(a))
 
     distance = R * c

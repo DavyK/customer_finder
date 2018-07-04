@@ -11,11 +11,13 @@ setup(
     author_email='davykavanagh@gmail.com',
     packages=['customer_finder'],
     install_requires=[
+        'click',
         'pytest',
+        'pytest-cov',
     ],
     entry_points={
         'console_scripts': [
-            'customers = customer_finder.main:cli',
+            'customers_nearby = customer_finder.main:main',
         ]
     }
 )
